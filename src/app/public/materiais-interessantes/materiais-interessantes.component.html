@@ -1,0 +1,37 @@
+<div class="materiais-interessantes-content">
+    <div style="margin-top: 30px;">
+        <div class="sidenav-materiais">
+            <a  (click)="selectedTab(1)">LEIS, DOCUMENTOS SOBRE INCLUSÃO</a>
+            <div class="line-bottom"></div>
+            <a >SOBRE INCLUSÃO ESCOLAR</a>
+            <div class="line-bottom"></div>
+            <a >COMUNICAÇÃO ALTERNATIVA</a>
+            <div class="line-bottom"></div>
+            <a >ATENDIMENTO EDUCACIONAL ESPECIALIZADO</a>
+            <div class="line-bottom"></div>
+            <a >TECNOLOGIA ASSISTIVA APLICADA A EDUCAÇÃO INCLUSIVA</a>
+        </div>
+        <div class="main">
+            <h2>{{nameTab}}</h2>
+            
+            <div *ngFor="let item of dados">
+
+                <div class="card-search" [style.font-size.px]="ctrl.getFontSize()">
+                    <div>
+                        <b>Titulo:</b> {{item.title}} - {{item.year}}
+                    </div>
+                    <div class="card-description">
+                        {{item.description}}
+                    </div>
+                    <div *ngFor="let link of item.links" style="margin-bottom: 6px;">
+                        <a [href]="link" target="_blank"  [ngStyle]="colorLink()">{{link}}</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <p-paginator [rows]="10" [totalRecords]="totalRecords" (onPageChange)="paginate($event)"></p-paginator>
+
+        </div> 
+    </div>
+</div>
