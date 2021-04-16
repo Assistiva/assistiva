@@ -1,0 +1,51 @@
+.example-card {
+    max-width: 350px;
+    max-height: 570px;
+    min-height: 570px;
+    background-color: #ecebeb;
+}
+  
+.example-header-image {
+    background-image: url('https://www.w3schools.com/howto/img_avatar.png');
+    background-size: cover;
+}
+
+.common-format{
+    margin-top: 30px;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+.line-scope-text{
+    border-top: 1px solid #dbdbdb;
+}
+
+// Title
+.custom-title{
+    display: inline;
+}
+
+.quem-somos-content{
+    width: 85%;
+    margin: auto;
+}
+
+.cards-quem-somos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.quadro-imagem {
+    max-width: 350px !important;
+    max-height: 400px !important;
+    min-width: 350px !important;
+    min-height: 400px !important;
+}
+
+.bem-vindo {
+    text-align: center;
+    color: #7abdf3;
+    font-size: 30px;
+    margin: 60px;
+}
