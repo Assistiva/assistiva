@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Assistiva</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="mat-typography">
+  <app-root id='pressed'></app-root>
+  <script>
+    var pressed = document.getElementById('pressed');
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    
+    function bottomFunction() {
+      document.body.scrollTo(0,document.body.scrollHeight);
+      document.documentElement.scrollTo(0,document.body.scrollHeight);
+    }
+
+    function homeFunction() {
+      var url = window.location.href.split("/");
+      window.location.replace(url[0]+"/public");
+    }
+
+    function keyPressed(evt) {
+      if (evt.key == 0){
+        homeFunction();
+      }else if (evt.key == 1) {
+        topFunction();
+      } else if (evt.key == 2) {
+        bottomFunction();
+      }
+    }
+
+    document.onkeypress = function (evt) {
+      keyPressed(evt);
+    };
+  </script>
+</body>
+
+</html>
