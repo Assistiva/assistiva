@@ -86,5 +86,21 @@ export const QuemSomosData = {
             lattes:"http://lattes.cnpq.br/9414510053521282",
             midia:"http://lattes.cnpq.br/9414510053521282"
         },
+        {
+            nome:"Viviane Cristina Dias",
+            funcao:"Professor Adjunto IV do Departamento de Eng. Mecânica (DEMEC - PUC Minas)",
+            foto:'/assets/images/quemsomos-images/viviane.jpeg',
+            descricao:defaultDescription,
+            lattes:"http://lattes.cnpq.br/6433670708900733",
+            midia:"http://lattes.cnpq.br/6433670708900733"
+        },
+        {
+            nome:"Mário Guimarães Buratto",
+            funcao:"Professor Assistente II no curso de Eng. Eletrônica e de Telecomunicação",
+            foto:'/assets/images/quemsomos-images/mario.jpeg',
+            descricao:defaultDescription,
+            lattes:"http://lattes.cnpq.br/6204867382787044",
+            midia:"http://lattes.cnpq.br/6204867382787044"
+        },
     ]
 };

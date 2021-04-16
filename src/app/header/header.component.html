@@ -5,6 +5,9 @@
       
       <div style="display: inline-flex;">
         <div style="font-size: 15px;margin-right: 25px;margin-left: 70px;">
+          Ir para página inicial [ 0 ] 
+        </div>
+        <div style="font-size: 15px;margin-right: 25px;">
           Ir para o topo [ 1 ] 
         </div>
         <div style="font-size: 15px;margin-right: 25px;">
@@ -36,7 +39,7 @@
 
   <mat-toolbar-row class="second-toolbar">
     <img width="40" alt="Angular Logo" [src]="IMAGEPATH"/>
-    <span style="color:black;" routerLink="public">{{TITLE}}</span>
+    <span style="color:black; cursor: pointer;" routerLink="public">{{TITLE}}</span>
     <span class="example-spacer"></span>
     <div class="grid-buttons">
       
@@ -49,19 +52,19 @@
       </div>
       
       <div>
-        <button mat-button [matMenuTriggerFor]="menu">TRABALHOS DE T.A</button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
-        </mat-menu>
+        <button mat-button routerLink="public/casa-aprender">CASA DO APRENDER</button>
+      </div>
+      
+      <div>
+        <button mat-button routerLink="public/trabalhos-ta">TRABALHOS DE T.A</button>
       </div>
 
       <div>
-        <button mat-button >LABORATÓRIO DE TECNOLOGIA</button>
+        <button mat-button routerLink="public/laboratorio-ta">LABORATÓRIO DE T.A</button>
       </div>
 
       <div>
-        <button mat-button >FALE CONOSCO</button>
+        <button mat-button routerLink="public/fale-conosco">FALE CONOSCO</button>
       </div>
 
     </div>
