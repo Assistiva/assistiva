@@ -1,3 +1,4 @@
+import { aba2Data } from './../../shared/mocks/aba2';
 import { leisData } from './../../shared/mocks/leisData';
 import { Component, OnInit } from '@angular/core';
 import { ControllStyles } from 'src/app/shared/services/controll-styles.service';
@@ -34,6 +35,13 @@ export class MateriaisInteressantesComponent implements OnInit {
         this.dados = this.originalData.slice(0,10);
     }
 
+    getInclusaoEscolarData(){
+        this.esconde = false;
+        this.originalData = aba2Data.data;
+        this.totalRecords = this.originalData.length;
+        this.dados = this.originalData.slice(0,10);
+    }
+
     classeLixoVazioApagar() {
         this.totalRecords = 0;
         this.dados = [];
@@ -47,7 +55,7 @@ export class MateriaisInteressantesComponent implements OnInit {
             this.getLeisData();
         } else if (tab === 2) {
             this.nameTab= 'SOBRE INCLUSÃO ESCOLAR';
-            this.classeLixoVazioApagar();
+            this.getInclusaoEscolarData();
         } else if(tab === 3) {
             this.nameTab= 'COMUNICAÇÃO ALTERNATIVA';
             this.classeLixoVazioApagar();
