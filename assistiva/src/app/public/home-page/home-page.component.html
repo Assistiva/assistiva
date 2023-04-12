@@ -1,0 +1,316 @@
+<div class="home-content" [ngStyle]="ctrl.getContrast()">
+
+
+    <div class="block-text">
+
+        <div [style.font-size.px]="ctrl.getFontSize()">
+            <div>
+                <h1 class="custom-title-home">BEM-VINDOS AO PUC ASSISTIVA</h1>
+            </div>
+            <div class="line-scope-text"></div>
+            <div class="justify-home-page">
+                <div class="common-format" style="width: 65%;" [style.font-size.px]="ctrl.getFontSize()">
+                    
+                    <p style="text-indent: 50px;" [ngStyle]="ctrl.getContrast()">O PUC Assistiva é um portal que tem como objetivo disseminar as possibilidades de uso da tecnologia na vida de pessoas com deficiência
+                        e manter alunos e comunidade atualizados sobre o tema, além de divulgar as iniciativas na PUC Minas na àrea.
+                        <br>
+                        <br>
+                        Para saber mais sobre nossa equipe,<span> <a routerLink="quem-somos" style="color: #4c9cfc;"> Clique aqui </a> </span>.
+                    </p>
+                
+                </div>
+                <div style="margin-top: 30px;" [ngStyle]="ctrl.getImagesVisibility()">
+    
+                    <img mat-card-image
+                        [src]="maos"
+                        alt="Maos human robot" width="350">
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="justify-home-page">
+            
+            <div class="size-c circulo-1 circulo-padrao">
+                <div style="text-align: center;">
+                    <a class="estilo-a" (click)="scrollToElement(tecnoassistiva)">O QUE É TECNOLOGIA ASSISTIVA</a>
+                </div>
+            </div>
+
+            <div class="size-c circulo-2 circulo-padrao">
+                <div style="text-align: center;">
+                    <a class="estilo-a" (click)="scrollToElement(classificacao)">CLASSIFICAÇÂO DA TECNOLOGIA ASSISTIVA</a>
+                </div>
+            </div>
+            
+            <div class="size-c circulo-3 circulo-padrao">
+                <div style="text-align: center;">
+                    <a class="estilo-a" (click)="scrollToElement(educacional)">A TECNOLOGIA ASSISTIVA NO CONTEXTO EDUCACIONAL</a>
+                </div>
+            </div>
+
+
+            <div class="size-c circulo-4 circulo-padrao">
+                <div style="text-align: center;">
+                    <a class="estilo-a" (click)="scrollToElement(proposta)">CONHEÇA A NOSSA PROPOSTA</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Block 1 text home page -->
+    <div class="block-text" [style.font-size.px]="ctrl.getFontSize()">
+        <div #tecnoassistiva>
+            <h1 class="custom-title-home">TECNOLOGIA ASSISTIVA</h1>
+            <!-- <button class="button-title-hearing" mat-button color="primary">
+                <mat-icon>hearing</mat-icon>
+            </button> -->
+        </div>
+        <div class="line-scope-text"></div>
+        <div class="justify-home-page">
+
+            <div class="justify-home-page">
+                <div style="margin-top: 30px; width: 30%; display: inline-block;" [ngStyle]="ctrl.getImagesVisibility()">
+    
+                    <div>
+                        <iframe width="350" height="200"            
+                            src="https://www.youtube.com/embed/BuwhLUaRck4?autoplay=1&loop=1&playlist=BuwhLUaRck4">            
+                        </iframe>
+                    </div>
+    
+                </div>
+    
+                <div class="common-format" style="width: 70%; align-self: center; display: inline-block;" [style.font-size.px]="ctrl.getFontSize()" [ngStyle]="ctrl.getContrast()">
+    
+                    <p style="text-indent: 50px;">No Brasil, o Comitê de Ajudas Técnicas - CAT, instituído pela PORTARIA N°
+                        142, DE 16
+                        DE NOVEMBRO DE 2006 propõe o seguinte conceito para a tecnologia assistiva:</p>
+    
+                    <p style="text-indent: 50px;">"Tecnologia Assistiva é uma área do conhecimento, de característica
+                        interdisciplinar,
+                        que engloba produtos, recursos, metodologias, estratégias, práticas e serviços que
+                        objetivam promover a funcionalidade, relacionada à atividade e participação de
+                        pessoas com deficiência, incapacidades ou mobilidade reduzida, visando sua
+                        autonomia, independência, qualidade de vida e inclusão social" (ATA VII - Comitê de
+                        Ajudas Técnicas (CAT) - Coordenadoria Nacional para Integração da Pessoa Portadora
+                        de Deficiência (CORDE) - Secretaria Especial dos Direitos Humanos - Presidência da
+                        República).</p>
+    
+                </div>
+
+            </div>
+            <div class="common-format" [style.font-size.px]="ctrl.getFontSize()" [ngStyle]="ctrl.getContrast()">
+                <p style="text-indent: 50px;">O termo utilizado na legislação brasileira é “ajudas técnicas” e está
+                    conceituada no
+                    decreto 3298 de 20 de Dezembro de 1999, em seu artigo 19 parágrafo único:</p>
+
+                <p>"Consideram-se ajudas técnicas, para efeito deste decreto os elementos que permitem
+                    compensar uma ou mais limitações funcionais, motoras, sensoriais ou mentais da
+                    pessoa portadora de deficiência, com o objetivo de permitir-lhe superar as barreiras
+                    da comunicação e da mobilidade e de possibilidade de sua plena inclusão social.”
+                    (Brasil, 1999)</p>
+
+                <p>Já no decreto 5296/2004 a definição é:</p>
+
+                <p>Consideram-se ajudas técnicas os produtos, instrumentos, equipamentos ou
+                    tecnologia adaptados ou especialmente projetados para melhorar a funcionalidade da
+                    pessoa portadora de deficiência ou com mobilidade reduzida, favorecendo a
+                    autonomia pessoal, total ou assistida. (Brasil, 2004)</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Block 2 text home page -->
+    <div class="block-text" [style.font-size.px]="ctrl.getFontSize()">
+
+        <div #classificacao>
+            <h1 class="custom-title-home">CLASSIFICAÇÃO DA TECNOLOGIA ASSISTIVA</h1>
+            <!-- <button class="button-title-hearing" mat-button color="primary">
+                <mat-icon>hearing</mat-icon>
+            </button> -->
+        </div>
+        <div class="line-scope-text"></div>
+        <div class="common-format" [style.font-size.px]="ctrl.getFontSize()">
+
+            <div>
+                <div style=" width: 30%; display: inline-block;" [ngStyle]="ctrl.getImagesVisibility()">
+                    <iframe width="350" height="200"            
+                        src="https://www.youtube.com/embed/_Fl4x8MyHvM?autoplay=1&loop=1&playlist=_Fl4x8MyHvM">            
+                    </iframe>
+                </div>
+
+                <div style=" width: 70%; display: inline-block;" [ngStyle]="ctrl.getContrast()">
+                    <p style="text-indent: 50px;">Os recursos de tecnologia assistiva são organizados ou classificados de acordo
+                        com
+                        objetivos funcionais a que se destinam.</p>
+        
+                    <p style="text-indent: 50px;">Várias classificações de TA foram desenvolvidas para finalidades distintas. O
+                        Sistema
+                        Nacional de Classificação dos Recursos e Serviços de TA, dos Estados Unidos, diferencia-se da ISO ao
+                        apresentar, além da descrição ordenada dos recursos, o
+                        conceito e a descrição de serviços de TA. </p>
+                    
+                    <p style="text-indent: 50px;">A classificação HEART, é apresentada de forma adaptada no documento
+                        EUSTATEmpowering Users Through Assistive Technology, que foi elaborado por um
+                        grupo de pesquisadores de vários países da União Européia e é considerada por eles,
+                        como sendo a mais apropriada para a formação dos usuários finais de TA, bem como
+                        para formação de recursos humanos nesta área.</p>
+                </div>
+            </div>
+
+
+
+            <div class="content-li">
+                <div class="justify-home-page">
+                    <div>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 03</b> Ajudas para terapia e treinamento
+                        </li>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 06</b> Órteses e próteses
+                        </li>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 09</b> Ajudas para segurança e proteção pessoal
+                        </li>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 12</b> Ajudas para mobilidade pessoal
+                        </li>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 15</b> Ajudas para atividades domésticas
+                        </li>
+                    </div>
+                    <div>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 18</b> Mobiliário e adaptações para residências e outros móveis
+                        </li>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 21</b> Ajudas para a comunicação, informação e sinalização
+                        </li>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 24</b> Ajudas para o manejo de bens e produtos
+                        </li>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 27</b> Ajudas e equipamentos para melhorar o ambiente, maquinaria e ferramentas
+                        </li>
+                        <li style="margin: 5px 20px;">
+                            <b>Classe 30</b> Ajudas para o lazer e tempo livre
+                        </li>
+                    </div>
+                </div>
+
+
+            </div>
+            <p style="text-indent: 50px;" [ngStyle]="ctrl.getContrast()">
+                Os dispositivos relacionados com a tecnologia assistiva podem ser produzidos em
+                série, para distribuição comercial, como também serem produzidos sob encomenda,
+                ou mesmo serem o produto de desenvolvimento artesanal. Quando a tecnologia
+                assistiva é usada para atender um caso específico, é denominada individualizada
+                (Mello 41997).
+            </p>
+            <p style="text-indent: 50px;" [ngStyle]="ctrl.getContrast()">
+                Tem-se comprovado, cada vez mais, que a tecnologia assistiva é multidisciplinar por
+                natureza, e envolve o trabalho de uma equipe. Entre os profissionais que compõe essa
+                equipe encontramos engenheiros, arquitetos, professores, assistentes sociais,
+                designers, familiares, fisioterapeutas, terapeutas ocupacionais, entre outros.
+            </p>
+        </div>
+    </div>
+
+    <!-- Block 3 text home page -->
+    <div class="block-text" [style.font-size.px]="ctrl.getFontSize()">
+        <div #educacional>
+            <h1 class="custom-title-home">A TECNOLOGIA ASSISTIVA NO CONTEXTO EDUCACIONAL</h1>
+            <!-- <button class="button-title-hearing" mat-button color="primary">
+                <mat-icon>hearing</mat-icon>
+            </button> -->
+        </div>
+        <div class="line-scope-text"></div>
+
+        <div class="justify-home-page">
+
+            <div class="justify-home-page">
+                <div style="margin-top: 30px;" [ngStyle]="ctrl.getImagesVisibility()">
+                    <img mat-card-image [src]="image2"
+                        alt="Quem somos"
+                        width="400">
+                </div>
+    
+                <div class="common-format" style="width: 60%;" [style.font-size.px]="ctrl.getFontSize()" [ngStyle]="ctrl.getContrast()">
+    
+                    <p style="text-indent: 50px;">A definição da necessidade de recursos de tecnologia assistiva no âmbito
+                        pedagógico está contemplada no parecer CNE/CEB 17/2001:</p>
+    
+                    <p style="text-indent: 50px;">( ...) Todos os alunos, em determinado momento de sua vida escolar, podem
+                        apresentar necessidades educacionais especiais, e seus professores, em geral, conhecem
+                        diferentes estratégias para dar respostas a elas. No entanto, existem necessidades
+                        educacionais, que requerem da escola uma série de recursos e apoios de caráter mais
+                        especializados que proporcionem ao aluno meios para acesso ao currículo.</p>
+                    <p>Esse mesmo parecer deixa claro que:</p>
+    
+                </div>
+            </div>
+            <div class="common-format" [style.font-size.px]="ctrl.getFontSize()" [ngStyle]="ctrl.getContrast()">
+                <p style="text-indent: 50px;">... Cabe a todos principalmente aos setores de pesquisa e às universidades
+                    o
+                    desenvolvimento de estudos na busca de melhores recursos para auxiliar/ampliar a
+                    capacidade das pessoas com necessidades educacionais especiais de se comunicar, de
+                    se locomover e de participar de maneira cada vez mais autônoma do meio
+                    educacional, da vida produtiva e social, exercendo, assim, de maneira plena sua
+                    cidadania. CNE/CEB 17/2001.</p>
+            </div>
+        
+        
+        </div>
+
+    </div>
+
+    <!-- Block 4 text home page -->
+    <div class="block-text" [style.font-size.px]="ctrl.getFontSize()">
+        <div #proposta>
+            <h1 class="custom-title-home">PROPOSTA DESSE ESPAÇO</h1>
+        </div>
+        <div class="line-scope-text"></div>
+        <div class="common-format" [style.font-size.px]="ctrl.getFontSize()">
+
+            <div class="justify-home-page">
+                
+                
+                <div class="justify-home-page">
+                    <div style="margin-top: 30px; width: 30%; display: inline-block;" [ngStyle]="ctrl.getImagesVisibility()">
+        
+                        <div>
+                            <iframe width="350" height="200"            
+                                src="https://www.youtube.com/embed/c1AixN3XVbc?autoplay=1&loop=1&playlist=c1AixN3XVbc">            
+                            </iframe>
+                        </div>
+        
+                    </div>
+        
+                    <div class="common-format" style="width: 70%; align-self: center; display: inline-block;" [style.font-size.px]="ctrl.getFontSize()" [ngStyle]="ctrl.getContrast()">
+        
+                        <p style="text-indent: 50px;">O curso de pedagogia da PUC Minas, através da área de coordenação de ações
+                            inclusivas, vem
+                            dar visibilidade ao trabalho realizado na PUC Minas na área da tecnologia assistiva em especial
+                            na área da educação inclusiva e educação de pessoas com NEE (necessidades educacionais
+                            especiais).</p>
+
+                        <p style="text-indent: 50px;">Vimos trabalhando com TA na PUC Minas em diversas frentes e, de uma forma
+                            interdisciplinar, contando com a participação de diversos profissionais interessados no tema.</p>
+        
+                            <p style="text-indent: 50px;">
+                                Além de explicitar as atividades realizadas pela pedagogia, através da Profª Nivânia Maria de Melo Reis,
+                                vamos também dar espaço para que os demais cursos possam apresentar os trabalhos interdisciplinares em desenvolvimento.</p>
+        
+                    </div>
+    
+                </div>
+            
+            </div>
+
+        </div>
+
+    </div>
+</div>

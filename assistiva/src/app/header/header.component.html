@@ -1,0 +1,235 @@
+<mat-toolbar class="toolbar">
+
+  <mat-toolbar-row class="first-toolbar">
+    <div class="contents-accessibility">
+      
+      <div style="display: inline-flex;">
+        <div style="font-size: 15px;margin-right: 25px;margin-left: 70px;">
+          Ir para página inicial [ 0 ] 
+        </div>
+        <div style="font-size: 15px;margin-right: 25px;">
+          Ir para o topo [ 1 ] 
+        </div>
+        <div style="font-size: 15px;margin-right: 25px;">
+          Ir para o rodapé [ 2 ]
+        </div>
+        <div style="font-size: 15px;margin-right: 25px;">
+          Navegar entre abas [ 3 ]
+        </div>
+        <div style="font-size: 15px; margin-right: 25px;">
+          <a [href]="SCREENREADER" target="_blank" style="color: #fbff00 !important;">Instalar Screen Reader</a>
+        </div>
+        <div style="font-size: 15px;">
+          <a [href]="VLIBRAS" target="_blank" style="color: #fbff00 !important;">Download NVDA</a>
+        </div>
+      </div>
+
+      <button mat-icon-button class="example-icon margin-cascade" (click)="visibleSidebar3 = true" label="Show">
+        <mat-icon>settings_accessibility</mat-icon>
+      </button>
+
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        (click)="showModalDialog()" [matTooltipPosition]="tootipPosition" [matTooltip]="contrastText">
+        <mat-icon>help</mat-icon>
+      </button>
+    
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        (click)="changeContrast()" [matTooltipPosition]="tootipPosition" [matTooltip]="contrastText">
+        <mat-icon>invert_colors</mat-icon>
+      </button>
+
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        (click)="changeFontSize('decrease')" [matTooltipPosition]="tootipPosition" [matTooltip]="decreaseText">
+        <mat-icon>zoom_out</mat-icon>
+      </button>
+
+      <mat-icon>font_download</mat-icon>
+
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        (click)="changeFontSize('increase')" [matTooltipPosition]="tootipPosition" [matTooltip]="increaseText">
+        <mat-icon>zoom_in</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="second-toolbar">
+    <img width="40" alt="Angular Logo" [src]="IMAGEPATH"/>
+    <span style="color:black; cursor: pointer;" routerLink="public">{{TITLE}}</span>
+    <span class="example-spacer"></span>
+    <div class="grid-buttons">
+      
+      <div>
+        <button mat-button routerLink="public/quem-somos">QUEM SOMOS</button>
+      </div>
+      
+      <div>
+        <button mat-button routerLink="public/materiais-interessantes">MATERIAIS</button>
+      </div>
+
+      <div>
+        <button mat-button routerLink="public/laboratorio-ta">LABORATÓRIO DE T.A</button>
+      </div>
+
+      <div>
+        <button mat-button routerLink="public/casa-aprender">CASA DO APRENDER</button>
+      </div>
+      
+      <div>
+        <button mat-button routerLink="public/trabalhos-ta">TRABALHOS DE T.A</button>
+      </div>
+
+      <!-- <div>
+        <button mat-button routerLink="public/fale-conosco">FALE CONOSCO</button>
+      </div> -->
+
+    </div>
+    <!-- <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button> -->
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<p-sidebar [(visible)]="visibleSidebar3" position="right" [baseZIndex]="1000" style="height: 500px !important;">
+  <div style="text-align: center; height: 500px !important;">
+
+    <h2 style="font-weight: bold;">Configurações Gerais</h2>
+
+    <div style="height: 500px !important;">
+      <div class="outerdiv" style="padding: 10px;">
+
+        <div style="margin: 20px;">
+          <p-dropdown [options]="tipoFonteList" [(ngModel)]="tipoFonte" placeholder="Selecione uma fonte" optionLabel="name" [showClear]="true"></p-dropdown>
+        </div>
+
+        <div style="margin: 20px;">
+          <p-dropdown [options]="tamanhoFonteList" [(ngModel)]="tamanhoFonte" placeholder="Selecione o tamanho da fonte" optionLabel="name" [showClear]="true"></p-dropdown>
+        </div>
+
+        <div style="margin: 20px;">
+          <p-dropdown [options]="espacamentoFonteList" [(ngModel)]="espacamentoFonte" placeholder="Selecione o espaçamento da fonte" optionLabel="name" [showClear]="true"></p-dropdown>
+        </div>
+
+      </div>
+
+      <div class="outerdiv">
+
+        <div class="p-field-checkbox" style="margin: 20px;">
+          <label for="binary" style="font-weight: bolder; padding-right: 5px;">Mostrar Imagens e Videos:</label>
+          <p-checkbox [(ngModel)]="showImages" binary="true" inputId="binary"></p-checkbox>
+        </div>
+
+        <div style="margin: 20px;">
+          <label style="font-weight: bolder; padding-right: 5px;">Cor do texto:</label>
+          <p-colorPicker [(ngModel)]="color"></p-colorPicker>
+        </div>
+
+        <div style="margin: 20px;">
+          <label style="font-weight: bolder; padding-right: 5px;">Cor de plano:</label>
+          <p-colorPicker [(ngModel)]="color2"></p-colorPicker>
+        </div>
+
+      </div>
+
+      <div class="outerdiv">
+        <label style="font-weight: bolder; padding-right: 5px;">Alinhamento:</label><div class="innerdiv">
+          <button mat-button (click)="changeTextAlignment('start')">
+            <span class="material-icons">
+              format_align_left
+            </span>
+          </button>
+        </div><div class="innerdiv">
+          <button mat-button (click)="changeTextAlignment('center')">
+            <span class="material-icons">
+              format_align_center
+            </span>
+          </button>
+        </div>
+        
+        <div class="innerdiv" >
+          <button mat-button (click)="changeTextAlignment('justify')">
+            <span class="material-icons">
+              format_align_justify
+            </span>
+          </button>
+        </div>
+
+        <div class="innerdiv">
+          <button mat-button (click)="changeTextAlignment('end')">
+            <span class="material-icons">
+              format_align_right
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="outerdiv" style="padding-top: 30px;">
+        <div style="margin: auto; display: grid; grid-template-columns: 1fr 1fr;">
+          <div style="justify-self: flex-end;">
+            <button mat-raised-button color="primary" (click)="aplicar()">APLICAR</button>
+          </div>
+          <div style="justify-self: flex-start; margin-left: 10px;">
+            <button mat-raised-button color="warn" (click)="limpar()">LIMPAR</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</p-sidebar>
+
+<p-dialog header="INFORMAÇÕES DE ACESSIBILIDADE" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <div style="display: flex; margin: 5px;">
+      <mat-icon>zoom_out</mat-icon>
+      <p class="p-m-0">Diminuir fonte</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <mat-icon>zoom_in</mat-icon>
+      <p class="p-m-0">Aumentar fonte</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <mat-icon>invert_colors</mat-icon>
+      <p class="p-m-0">Contraste do site</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <mat-icon>settings_accessibility</mat-icon>
+      <p class="p-m-0">Configurações gerais do site</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <img width="25" alt="Angular Logo" [src]="VICON"/>
+      <p class="p-m-0" style="margin-left: 5px;">VLIBRAS Leitor de tela</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <img width="25" alt="Angular Logo" [src]="TECLA0"/>
+      <p class="p-m-0" style="margin-left: 5px;">Tecla 0 voltar para página inicial</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <img width="25" alt="Angular Logo" [src]="TECLA1"/>
+      <p class="p-m-0" style="margin-left: 5px;">Tecla 1 ir para o topo da página</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <img width="25" alt="Angular Logo" [src]="TECLA2"/>
+      <p class="p-m-0" style="margin-left: 5px;">Tecla 2 ir para o fim da página</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <img width="25" alt="Angular Logo" [src]="TECLA3"/>
+      <p class="p-m-0" style="margin-left: 5px;">Tecla 3 trocar de Abas</p>
+    </div>
+    <div style="display: flex; margin: 5px;">
+      <mat-icon style="font-size: 28px;">keyboard_alt</mat-icon>
+      <p class="p-m-0" style="margin-left: 15px;">Tecla <b>TAB</b> para navegar em elementos da página e tecla <b>ENTER</b> para selecionar onde estiver a marcação</p>
+    </div>
+    <div style="margin: 5px;">
+      <strong>Programas:</strong>
+      <div style="margin-left: 15px;">
+        <li><a [href]="SCREENREADER" target="_blank">Instalar Screen Reader (extensão Google Chrome)</a></li>
+        <li><a [href]="VLIBRAS" target="_blank">Download NVDA (Aplicativo leitor de Tela para Windows)</a></li>
+      </div>
+    </div>
+</p-dialog>

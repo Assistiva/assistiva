@@ -1,0 +1,43 @@
+.casa-aprender-content{
+    width: 70%;
+    margin: auto;
+}
+
+.common-format{
+    margin-top: 30px;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+.line-scope-text{
+    border-top: 1px solid #dbdbdb;
+}
+
+// Title
+.custom-title-home{
+    display: inline;
+    font-weight: bolder;
+    // color: #3f51b5;
+}
+
+.button-title-hearing{
+    // title button
+    float: left !important;
+    line-height: 30px !important;
+}
+
+.content-li{
+    // padding-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.block-text{
+    margin-top: 40px;
+}
+
+.justify-home-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

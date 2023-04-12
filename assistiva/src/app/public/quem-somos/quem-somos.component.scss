@@ -1,0 +1,61 @@
+.example-card {
+    max-width: 300px;
+    max-height: 500px;
+    min-height: 500px;
+    min-width: 300px;
+    background-color: #ecebeb;
+}
+  
+.example-header-image {
+    background-image: url('https://www.w3schools.com/howto/img_avatar.png');
+    background-size: cover;
+}
+
+.common-format{
+    margin-top: 30px;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+.line-scope-text{
+    border-top: 1px solid #dbdbdb;
+}
+
+// Title
+.custom-title{
+    display: inline;
+    font-weight: bolder;
+    // color: #3f51b5;
+}
+
+.quem-somos-content{
+    width: 70%;
+    margin: auto;
+}
+
+.cards-quem-somos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.quadro-imagem {
+    max-width: 300px !important;
+    max-height: 300px !important;
+    min-width: 300px !important;
+    min-height: 300px !important;
+}
+
+.bem-vindo {
+    text-align: center;
+    color: #7abdf3;
+    font-size: 30px;
+    margin: 60px;
+}
+
+.btn-linkedin {
+    background-color: dodgerblue;
+    color: white;
+    max-width: 90px;
+    min-width: 90px;
+}

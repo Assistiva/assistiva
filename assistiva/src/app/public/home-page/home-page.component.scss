@@ -1,0 +1,92 @@
+
+.home-content{
+    width: 70%;
+    margin: auto;
+}
+
+.common-format{
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.line-scope-text{
+    border-top: 1px solid #dbdbdb;
+}
+
+// Title
+.custom-title-home{
+    display: inline;
+    font-weight: bolder;
+    // color: #3f51b5;
+}
+
+.button-title-hearing{
+    // title button
+    float: left !important;
+    line-height: 30px !important;
+}
+
+.content-li{
+    // padding-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.block-text{
+    margin-top: 40px;
+}
+
+.justify-home-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.size-c {
+    height: 200px;
+    width:200px;
+}
+
+.circulo-padrao {
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1em;
+    
+    display: -webkit-flex;
+     display: -ms-flexbox;
+            display: flex;
+
+    -webkit-align-items: center;
+      -webkit-box-align: center;
+	 -ms-flex-align: center;
+	    align-items: center;
+    
+  justify-content: center;
+}
+
+.circulo-1 {
+    
+    background: #3F51B5;    
+
+}
+
+.circulo-2 {
+    
+    background: #3fb55d;    
+}
+
+.circulo-3 {
+    
+    background: #347deb;    
+
+}
+
+.circulo-4 {
+    background: #5d72e6;  
+}
+
+.estilo-a {
+    color: #ffffff !important;
+    font-weight: bold;
+    cursor: pointer;
+}

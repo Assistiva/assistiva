@@ -1,0 +1,122 @@
+.materiais-interessantes-content{
+    width: 100% !important;
+    margin: auto;
+    min-height: 800px;
+}
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
+
+.line-bottom {
+    border-bottom: 2px solid white;
+}
+
+.card-search {
+    margin: 20px 0px 20px;
+    font-size: 20px;
+    letter-spacing: 2px !important;
+    .card-description {
+        width: 80%;
+        padding: 10px 0px;
+    }
+}
+
+::ng-deep .ui-paginator{
+    background-color: transparent !important;
+    border: transparent !important;
+    padding: 15px !important;
+}
+
+.div-sorry {
+    width: 100%;
+    height: 100%;
+    // margin: 20px 0px 20px;
+    // font-size: 20px;
+    // letter-spacing: 2px !important;
+    // width: 80%;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+    position: fixed;
+    // height: 400px;
+    overflow: auto;
+    background: #b1e4e7;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    cursor: pointer;
+    color: mediumblue
+}
+
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    color: white;
+    background-color: #00bd20;
+    font-size: 16px;
+}
+
+div.main {
+    margin-left: 300px;
+    padding: 1px 16px;
+    // height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    div.main {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+.mat-tab-group {
+    margin-bottom: 48px;
+}
+
+.materiais-pesquisa {
+    top: 100px;
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    width: 100%;
+
+}
+
+.form-field-materiais {
+    width: 90%;
+    margin-top: 20px;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #3f51b5;
+}
+
+::ng-deep app-materiais-interessantes {
+    width: 100%;
+}
