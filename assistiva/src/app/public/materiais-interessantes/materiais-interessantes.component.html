@@ -27,7 +27,7 @@
                     <div *ngIf="!esconde">
                         <div *ngFor="let item of dados">
             
-                            <div class="card-search" [style.font-size.px]="ctrl.getFontSize()">
+                            <div class="card-search" [style.font-size.px]="ctrl.getFontSize()" [ngStyle]="ctrl.getContrast()">
                                 <div>
                                     <b>Titulo:</b> {{item.title}} - {{item.year}}
                                 </div>

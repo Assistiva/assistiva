@@ -5,8 +5,8 @@
 
         <div style="margin-top: 30px; margin-bottom: 30px;">
             <div class="cards-quem-somos">
-                <div style="width: 70%; font-size: 20px; letter-spacing: 2px !important;"
-                    [style.font-size.px]="ctrl.getFontSize()">
+                <div style="width: 70%; font-size: 20px;"
+                    [style.font-size.px]="ctrl.getFontSize()" [ngStyle]="ctrl.getContrast()">
                     <p>
                         Somos uma equipe multidisciplinar formada por professores da PUC Minas que trabalham com
                         tecnologia assistiva, tanto na pesquisa quanto na extensão na universidade.
@@ -41,7 +41,7 @@
                         as iniciativas na PUC Minas na área.
                     </p>
                 </div>
-                <div [ngStyle]="ctrl.getImagesVisibility()">
+                <div style="margin-top: 20px;" [ngStyle]="ctrl.getImagesVisibility()">
                     <img mat-card-image [src]="quemSomosImg" alt="Quem somos">
                 </div>
             </div>
@@ -61,14 +61,10 @@
             <div *ngFor="let idealizador of idealizadores" style="margin-bottom: 50px;">
                 <mat-card class="example-card">
                     <mat-card-header style="height: 90px !important;">
-                        <!-- <div mat-card-avatar class="example-header-image"></div> -->
                         <mat-card-title>{{idealizador.nome}}</mat-card-title>
                         <mat-card-subtitle>{{idealizador.funcao}}</mat-card-subtitle>
                     </mat-card-header>
                     <img class="quadro-imagem" mat-card-image [src]="idealizador.foto" alt="idealizador foto">
-                    <!-- <mat-card-content>
-                        <p>{{idealizador.descricao}}</p>
-                    </mat-card-content> -->
                     <mat-card-actions style="text-align: center;">
                         <button mat-button (click)="navigateToLattes(idealizador.lattes)" class="btn-linkedin">Lattes</button>
                         <button mat-button (click)="navigateToLattes(idealizador.lattes)" class="btn-linkedin">Linked in</button>
@@ -87,14 +83,10 @@
             <div *ngFor="let pesquisador of pesquisadores1;" style="margin-bottom: 50px;">
                 <mat-card class="example-card">
                     <mat-card-header style="height: 90px !important;">
-                        <!-- <div mat-card-avatar class="example-header-image"></div> -->
                         <mat-card-title>{{pesquisador.nome}}</mat-card-title>
                         <mat-card-subtitle>{{pesquisador.funcao}}</mat-card-subtitle>
                     </mat-card-header>
                     <img class="quadro-imagem" mat-card-image [src]="pesquisador.foto" alt="pesquisador foto">
-                    <!-- <mat-card-content>
-                        <p>{{pesquisador.descricao}}</p>
-                    </mat-card-content> -->
                     <mat-card-actions style="text-align: center;">
                         <button mat-button (click)="navigateToLattes(pesquisador.lattes)" class="btn-linkedin">Lattes</button>
                         <button mat-button (click)="navigateToLattes(pesquisador.lattes)" class="btn-linkedin">Linked in</button>
@@ -106,14 +98,10 @@
             <div *ngFor="let pesquisador of pesquisadores2;" style="margin-bottom: 50px;">
                 <mat-card class="example-card">
                     <mat-card-header style="height: 90px !important;">
-                        <!-- <div mat-card-avatar class="example-header-image"></div> -->
                         <mat-card-title>{{pesquisador.nome}}</mat-card-title>
                         <mat-card-subtitle>{{pesquisador.funcao}}</mat-card-subtitle>
                     </mat-card-header>
                     <img class="quadro-imagem" mat-card-image [src]="pesquisador.foto" alt="pesquisador foto">
-                    <!-- <mat-card-content>
-                        <p>{{pesquisador.descricao}}</p>
-                    </mat-card-content> -->
                     <mat-card-actions style="text-align: center;">
                         <button mat-button (click)="navigateToLattes(pesquisador.lattes)" class="btn-linkedin">Lattes</button>
                         <button mat-button (click)="navigateToLattes(pesquisador.lattes)" class="btn-linkedin">Linked in</button>
@@ -125,14 +113,10 @@
             <div *ngFor="let pesquisador of pesquisadores3;" style="margin-bottom: 50px;">
                 <mat-card class="example-card">
                     <mat-card-header style="height: 90px !important;">
-                        <!-- <div mat-card-avatar class="example-header-image"></div> -->
                         <mat-card-title>{{pesquisador.nome}}</mat-card-title>
                         <mat-card-subtitle>{{pesquisador.funcao}}</mat-card-subtitle>
                     </mat-card-header>
                     <img class="quadro-imagem" mat-card-image [src]="pesquisador.foto" alt="pesquisador foto">
-                    <!-- <mat-card-content>
-                        <p>{{pesquisador.descricao}}</p>
-                    </mat-card-content> -->
                     <mat-card-actions style="text-align: center;">
                         <button mat-button (click)="navigateToLattes(pesquisador.lattes)" class="btn-linkedin">Lattes</button>
                         <button mat-button (click)="navigateToLattes(pesquisador.lattes)" class="btn-linkedin">Linked in</button>
