@@ -111,6 +111,10 @@
         </div>
 
         <div style="margin: 20px;">
+          <p-dropdown [options]="espacamentoLinhaList" [(ngModel)]="espacamentoLinha" placeholder="Selecione o espaçamento das linhas" optionLabel="name" [showClear]="true"></p-dropdown>
+        </div>
+
+        <div style="margin: 20px;">
           <p-dropdown [options]="espacamentoFonteList" [(ngModel)]="espacamentoFonte" placeholder="Selecione o espaçamento da fonte" optionLabel="name" [showClear]="true"></p-dropdown>
         </div>
 

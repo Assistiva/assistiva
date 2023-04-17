@@ -28,10 +28,12 @@ export class HeaderComponent implements OnInit {
   public visibleSidebar3;
   public tipoFonteList: any[];
   public tamanhoFonteList: any[];
+  public espacamentoLinhaList: any[];
   public espacamentoFonteList: any[];
 
   public tipoFonte;
   public tamanhoFonte;
+  public espacamentoLinha;
   public espacamentoFonte;
   public color: string;
   public color2: string;
@@ -70,11 +72,18 @@ export class HeaderComponent implements OnInit {
       { name: "36px", code: 36 },
       { name: "48px", code: 48 },
     ];
-    this.espacamentoFonteList = [
+    this.espacamentoLinhaList = [
       { name: "Simples", code: "normal" },
       { name: "1,15", code: 1.15 },
       { name: "1,5", code: 1.5 },
       { name: "Duplo", code: 2 },
+    ];
+    this.espacamentoFonteList = [
+      { name: "Padrão", code: "normal" },
+      { name: "2", code: "2px" },
+      { name: "3", code: "3px" },
+      { name: "4", code: "4px" },
+      { name: "5", code: "5px" },
     ];
   }
 
@@ -130,7 +139,8 @@ export class HeaderComponent implements OnInit {
         color: this.color || "black",
         "text-align": this.textAlign || "justify",
         "font-family": this.tipoFonte ? this.tipoFonte.code : "Arial",
-        "line-height": this.espacamentoFonte || "normal",
+        "line-height": this.espacamentoLinha.code || "normal",
+        "letter-spacing": this.espacamentoFonte.code || "normal",
       };
       this.ctrl.setContraste(contraste);
     } catch {
@@ -156,6 +166,7 @@ export class HeaderComponent implements OnInit {
       "text-align": "justify",
       "font-family": "Arial",
       "line-height": "normal",
+      "letter-spacing": "normal",
     };
     this.color = undefined;
     this.color2 = undefined;
@@ -163,6 +174,7 @@ export class HeaderComponent implements OnInit {
     this.ctrl.setContraste(padrao);
     this.ctrl.setFontSize(16);
     this.ctrl.setLineHeight("normal");
+    this.ctrl.setLetterSpacing("normal");
     this.showImages = true;
     this.ctrl.setImagesVisibility({ visibility: "visible" });
   }

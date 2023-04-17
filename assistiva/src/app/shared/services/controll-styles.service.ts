@@ -10,11 +10,13 @@ export class ControllStyles {
     "text-align": "justify",
     "font-family": "Arial",
     "line-height": "normal",
+    "letter-spacing": "normal",
   };
   fontSize: number = 16;
   alignText: string = "justify";
   fontFamily: string = "Arial";
   lineHeight: string = "normal";
+  letterSpacing: string = "normal";
   imagesVisibility: any = { visibility: "visible" };
 
   constructor() {}
@@ -42,6 +44,8 @@ export class ControllStyles {
 
   public setContraste(contraste: any) {
     this.contraste = contraste;
+
+    console.log(contraste);
   }
 
   public setFontSize(font: number) {
@@ -58,6 +62,10 @@ export class ControllStyles {
 
   public setLineHeight(lineHeight: string) {
     this.lineHeight = lineHeight;
+  }
+
+  public setLetterSpacing(letterSpacing: string) {
+    this.letterSpacing = letterSpacing;
   }
 
   public setImagesVisibility(img: any) {
