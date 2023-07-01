@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  angular-ui:
+    container_name: angular-ui
+    build:
+      context: ./assistiva
+      dockerfile: Dockerfile
+    ports:
+      - "4201:80"

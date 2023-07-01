@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Assistiva</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="mat-typography">
+  <app-root id='pressed'></app-root>
+  <script>
+    var pressed = document.getElementById('pressed');
+
+    function topFunction() {
+      try {
+        if (!window.location.href.includes('/materiais-interessantes')) {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      } catch (e) {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    }
+    
+    function bottomFunction() {
+      try {
+        if (!window.location.href.includes('/materiais-interessantes')) {
+          document.body.scrollTo(0,document.body.scrollHeight);
+          document.documentElement.scrollTo(0,document.body.scrollHeight);
+        }
+      } catch (e) {
+        document.body.scrollTo(0,document.body.scrollHeight);
+        document.documentElement.scrollTo(0,document.body.scrollHeight);
+      }
+    }
+
+    function homeFunction() {
+      try {
+        if (!window.location.href.includes('/materiais-interessantes')) {
+          var url = window.location.href.split("/");
+          window.location.replace(url[0]+"/public");
+        }
+      } catch (e) {
+        var url = window.location.href.split("/");
+        window.location.replace(url[0]+"/public");
+      }
+    }
+
+    function changeTabFunction() {
+      try {
+        var abas = ['public', 'quem-somos', 'materiais-interessantes','laboratorio-ta', 'casa-aprender', 'trabalhos-ta'];
+        
+        // pegar posicao atual, se for 5 -> coloca 0 (volta pro inicio de tudo)
+        console.log("Caminho ", window.location.href);
+        
+        // se index -1 vai para home
+
+        var url = window.location.href.split("public");
+        if (url) {
+          var pathPadrao = url[0];
+          var pathAtual = url[1];
+          console.log("Caminho atual ", pathAtual);
+          console.log("Caminho padrao ", url[0]);
+          var idx = abas.indexOf(pathAtual.replace("/", ""));
+          console.log("index ", idx);
+
+          if (idx && (idx >= 0 && idx < 5)) {
+            // caminho novo do index
+            var novo = pathPadrao+abas[idx+1];
+            console.log("Novo url ", novo);
+            // window.location.replace(novo);
+
+          } else {
+            // pagina inicial
+            var novo = pathPadrao+abas[0];
+            console.log("Novo url ", novo);
+          }
+        }
+      } catch (e) {
+        var url = window.location.href.split("/");
+        window.location.replace(url[0]+"/public");
+      }
+    }
+
+    function keyPressed(evt) {
+      if (evt.key == 0){
+        homeFunction();
+      }else if (evt.key == 1) {
+        topFunction();
+      } else if (evt.key == 2) {
+        bottomFunction();
+      } else if (evt.key == 3) {
+        changeTabFunction();
+      }
+    }
+
+    document.onkeypress = function (evt) {
+      keyPressed(evt);
+    };
+  </script>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+
+</html>

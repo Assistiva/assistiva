@@ -1,0 +1,63 @@
+<div style="margin:0 auto; height: 100%; margin-top: 30px; width: 80%;" [ngStyle]="ctrl.getContrast()">
+
+    <div class="content-foto-ta" [ngStyle]="ctrl.getImagesVisibility()">
+        <img mat-card-image [src]="SORRY" alt="sorry foto" style="width: 100%;">
+    </div>
+
+    <div>
+
+        <div class="texto-intro-ta" [style.font-size.px]="ctrl.getFontSize()" [ngStyle]="ctrl.getContrast()">
+            <p>
+                O laboratório de tecnologia assistiva do ICH PUC Minas foi montado a partir de um projeto do NAI PUC
+                Minas para receberem um novo curso de tecnólogo em libras e braille e também atender às demandas de
+                formação dos alunos do curso de pedagogia com ênfase em N.E.E. No ano de 2007.
+            </p>
+            <p>
+                Hoje em dia ele atende as demandas das disciplinas de educação inclusiva do nono período de pedagogia
+                com aprofundamento em N.E.E., aos projetos de extensão Casa do Aprender: oficinas de informática e
+                comunicação alternativa, e o projeto de alfabetização de adultos com deficiências, o projeto ALEGRIA. O
+                laboratório também atende as demandas de pesquisa do projeto levitronic, e as disciplinas de tecnologia
+                assistiva e comunicação alternativa, aplicadas à educação inclusiva da graduação e da pós graduação.
+            </p>
+        </div>
+
+        <div style="margin-top: 50px; margin-bottom: 50px;" [ngStyle]="ctrl.getImagesVisibility()">
+
+            <div class="container">
+                <div class="carousel">
+                    <input type="radio" id="carousel-1" name="carousel[]" checked>
+                    <input type="radio" id="carousel-2" name="carousel[]">
+                    <input type="radio" id="carousel-3" name="carousel[]">
+                    <input type="radio" id="carousel-4" name="carousel[]">
+                    <ul class="carousel__items">
+                        <li class="carousel__item"><img class="content-foto-ta" mat-card-image [src]="TA2" alt="" width="600" height="500"></li>
+                        <li class="carousel__item"><img class="content-foto-ta" mat-card-image [src]="TA4" alt="" width="600" height="500"></li>
+                        <li class="carousel__item"><img class="content-foto-ta" mat-card-image [src]="TA5" alt="" width="600" height="500"></li>
+                        <li class="carousel__item"><img class="content-foto-ta" mat-card-image [src]="TA1" alt="" width="700" height="500"></li>
+                    </ul>
+                    <div class="carousel__prev">
+                        <label for="carousel-1"></label>
+                        <label for="carousel-2"></label>
+                        <label for="carousel-3"></label>
+                        <label for="carousel-4"></label>
+                    </div>
+                    <div class="carousel__next">
+                        <label for="carousel-1"></label>
+                        <label for="carousel-2"></label>
+                        <label for="carousel-3"></label>
+                        <label for="carousel-4"></label>
+                    </div>
+                    <div class="carousel__nav">
+                        <label for="carousel-1"></label>
+                        <label for="carousel-2"></label>
+                        <label for="carousel-3"></label>
+                        <label for="carousel-4"></label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
